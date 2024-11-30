@@ -1,6 +1,6 @@
 <?php
-require_once "../../model/CRUD.php";
-$crud = new CRUD();
+require_once "../../model/CRUD_Villa.php";
+$crud = new CRUD_Villa();
 if (isset($_GET["ref"])) {
     $deleted = $crud->supprimer($_GET["ref"]);
     if ($deleted) {

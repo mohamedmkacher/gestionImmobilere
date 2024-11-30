@@ -1,7 +1,7 @@
 <?php
 require_once "config.php";
 
-class CRUD
+abstract class CRUD
 {
     protected $connexion;
     function __construct()

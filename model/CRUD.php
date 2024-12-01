@@ -20,7 +20,7 @@ abstract class CRUD
     public function supprimer(int $ref)
     {
         $sql = "delete from Immobilier where reference=$ref;";
-        $res = $this->connexion->query($sql);
+        $res = $this->connexion->exec($sql);
         return $res;
     }
 }

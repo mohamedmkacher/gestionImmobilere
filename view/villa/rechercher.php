@@ -31,7 +31,7 @@ ob_start();
             </tr>
         </tbody>
     </table>
-<?php } else { ?><h5>Aucune villa trouvé</h5>
+<?php } else { ?><h5>Aucune villa trouvée</h5>
 
 
 <?php } ?>

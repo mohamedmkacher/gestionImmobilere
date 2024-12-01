@@ -17,7 +17,7 @@ class CRUD_Appartement extends CRUD
         $domaineUsage = $appartement->getDomaineUsage();
         $surfaceEspaceCommun = $appartement->getSurfaceEspaceCommun();
 
-        $sql = "insert into Immobilier values (null,'$proprietaire','$localite',$surface,$nbPieces,'$domaineUsage','A',null,$surfaceEspaceCommun)";
+        $sql = "insert into Immobilier values (null,'$proprietaire','$localite',$surface,$nbPieces,'$domaineUsage',null,$surfaceEspaceCommun)";
         $res = $this->connexion->exec($sql);
         return $res;
     }
@@ -38,7 +38,7 @@ class CRUD_Appartement extends CRUD
     }
     public function lister()
     {
-        $sql = "select * from Immobilier where type='A'";
+        $sql = "select * from Immobilier where surfaceEspaceCommun is not null;";
         $res = $this->connexion->query($sql);
         $lesApparts = $res->fetchAll(pdo::FETCH_ASSOC);
         return $lesApparts;

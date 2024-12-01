@@ -16,7 +16,7 @@ class CRUD_Villa extends CRUD
         $nbPieces = $villa->getNbPieces();
         $domaineUsage = $villa->getDomaineUsage();
         $nbEtages = $villa->getNbEtages();
-        $sql = "insert into Immobilier values (null,'$proprietaire','$localite',$surface,$nbPieces,'$domaineUsage','V',$nbEtages,null)";
+        $sql = "insert into Immobilier values (null,'$proprietaire','$localite',$surface,$nbPieces,'$domaineUsage',$nbEtages,null)";
         $res = $this->connexion->exec($sql);
         return $res;
     }
@@ -37,7 +37,7 @@ class CRUD_Villa extends CRUD
     }
     public function lister()
     {
-        $sql = "select * from Immobilier where type='V'";
+        $sql = "select * from Immobilier where nbEtages is not null;";
         $res = $this->connexion->query($sql);
         return $res;
     }

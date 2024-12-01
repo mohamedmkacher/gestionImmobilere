@@ -13,13 +13,13 @@ for ($i = 0; $i < 100; $i++) {
     $sql .= "insert into immobilier values (null,'$proprietaire','$localite',$surface,$nbPieces,'$domaineUsage',";
 
     if ($i % 2 == 0) {
-        $type = 'A';
+
         $surfaceEspaceCommun = random_int(10, 30);
-        $sql .= "'$type',null,$surfaceEspaceCommun);";
+        $sql .= "null,$surfaceEspaceCommun);";
     } else {
-        $type = 'V';
+
         $nbEtages = random_int(1, 3);
-        $sql .= "'$type',$nbEtages,null);";
+        $sql .= "$nbEtages,null);";
     }
 }
 $res = $pdo->exec($sql);

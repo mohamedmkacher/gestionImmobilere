@@ -8,15 +8,7 @@ abstract class Immobilier
     protected int $nbPieces;
     protected string $domaineUsage;
 
-    /*function __construct(string $proprietaire, string $localite, int $surface, int $nbPieces, string $domaineUsage)
-    {
-        
-        $this->proprietaire = $proprietaire;
-        $this->localite = $localite;
-        $this->surface = $surface;
-        $this->nbPieces = $nbPieces;
-        $this->domaineUsage = $domaineUsage;
-    }*/
+   
     function __construct( $reference, string $proprietaire, string $localite, int $surface, int $nbPieces, string $domaineUsage)
     {
         $this->reference = $reference;

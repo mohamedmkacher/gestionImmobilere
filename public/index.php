@@ -30,7 +30,7 @@
     <div class="container">
         <h1>Bienvenue</h1>
         <a href="../controler/appartement/lister.php" class="btn btn-dark mb-3">Gestion des appartements</a><br>
-        <a href="../controler/villa/lister.php" class="btn btn-dark">Gestion des appartements</a>
+        <a href="../controler/villa/lister.php" class="btn btn-dark">Gestion des villas</a>
 </body>
 
 </html>

@@ -32,7 +32,7 @@ ob_start();
             </tr>
         </tbody>
     </table>
-<?php } else { ?><h5>Aucun appartement trouvée</h5>
+<?php } else { ?><h5>Aucun appartement trouvé</h5>
 
 <?php } ?><a class="btn btn-dark" href="lister.php">Retour</a>
 
